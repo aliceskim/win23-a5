@@ -31,7 +31,13 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
 fi
 
 #aliceskim Test: Ensure calculator has correct output
-if [[ $($CALCULATOR 2 * 3) -ne 6 ]]; then  # If the output of the program is not 6...
-  echo 'ERROR! A valid run of the calculator (2 * 3) failed to produce 6 as an output!'
+if [[ $($CALCULATOR 6 / 3) -ne 2 ]]; then  # If the output of the program is not 6...
+  echo 'ERROR! A valid run of the calculator (6 / 3) failed to produce 2 as an output!'
+  exit 1
+fi
+
+#aliceskim Test: Ensure calculator has correct output
+if [[ $($CALCULATOR 2 + 9) -ne 11 ]]; then # If the output of the program is not 11...
+  echo 'ERROR! A valid run of the calculator (2 + 9) failed to produce 2 as an output!'
   exit 1
 fi
